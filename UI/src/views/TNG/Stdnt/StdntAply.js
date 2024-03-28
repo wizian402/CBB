@@ -121,9 +121,6 @@ const StdntAply = () => {
     setCurrentPage(1); // Reset pagination when input changes
   };
 
-
-
-
   return (
     <CRow>
       <CCol xs={12}>
@@ -139,7 +136,7 @@ const StdntAply = () => {
               value={enteredTask}
               onChange={handleTaskInputChange}
             />
-            <CTable>
+            <CTable hover>
               <CTableHead>
                 <CTableRow>
                   <CTableHeaderCell scope="col" style={{ width: '10%' }} className="text-center">NO</CTableHeaderCell>
@@ -216,6 +213,8 @@ const TNGDetailModal = ({ selectedTng, bzentyNmList, onClose, loginId, navigate 
         } else if (data === "exist") {
           alert("진행중인 현장실습이 존재합니다.")
           navigate('/stdntProgAply');
+        } else if (data === "exist2") {
+          alert("승인된 현장실습이 존재합니다.")
         }
         else {
           console.log('Unexpected response received from server:', data);

@@ -63,7 +63,10 @@
 	<mybatis-spring:scan
 		base-package="com.wizian.cbb.tng.admin.dao" />
 
-
+	<context:component-scan
+		base-package="com.wizian.cbb.tng.updateTng"></context:component-scan>
+	<mybatis-spring:scan
+		base-package="com.wizian.cbb.tng.updateTng.dao" />
 
 </beans>
   

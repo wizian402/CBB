@@ -80,7 +80,7 @@ const TngProgStdnt = () => {
             <strong>현장 실습 신청 학생</strong>
           </CCardHeader>
           <CCardBody>
-            <CTable>
+            <CTable hover>
               <CTableHead>
                 <CTableRow>
                   <CTableHeaderCell scope="col" style={{ width: '10%' }} className="text-center">NO</CTableHeaderCell>

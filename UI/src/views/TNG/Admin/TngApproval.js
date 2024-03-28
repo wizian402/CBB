@@ -186,7 +186,7 @@ const TngList = () => {
                 <CDropdownItem onClick={() => handleDropdownItemClick("40")}>실습 종료</CDropdownItem>
               </CDropdownMenu>
             </CDropdown>
-            <CTable>
+            <CTable hover>
               <CTableHead>
                 <CTableRow>
                   <CTableHeaderCell scope="col" style={{ width: '12%' }} className="text-center">NO</CTableHeaderCell>

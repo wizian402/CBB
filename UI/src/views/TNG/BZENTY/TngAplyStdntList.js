@@ -78,7 +78,7 @@ const TngAplyStdntList = () => {
             {stdntList.length === 0 ? (
               <div>신청 학생이 없습니다.</div>
             ) : (
-              <CTable>
+              <CTable hover>
                 <CTableHead>
                   <CTableRow>
                     <CTableHeaderCell scope="col" style={{ width: '10%' }} className="text-center">NO</CTableHeaderCell>

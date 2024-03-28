@@ -42,8 +42,10 @@ public class StdntAplyController {
 			List<Map<String, Object>> sttsList = stdntAplyService.getTngStdnt(stdntSn);
 			for (Map<String, Object> stts : sttsList) {
 				String tngProgStts = String.valueOf(stts.get("tngPrgrsStts"));
-				if (tngProgStts.equals("30") || tngProgStts.equals("20")) {
+				if (tngProgStts.equals("30")) {
 					return ResponseEntity.ok("exist");
+				} else if(tngProgStts.equals("20")) {
+					return ResponseEntity.ok("exist2");
 				}
 			}
 			if (stdntAplyService.countTngStdnt(tngNo, stdntSn) != 0) {

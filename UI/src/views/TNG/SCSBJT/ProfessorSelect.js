@@ -170,7 +170,7 @@ const ProfessorSelect = () => {
               onChange={handleSearchTermChange}
               style={{ width: '300px' }}
             />
-            <CTable>
+            <CTable hover>
               <CTableHead>
                 <CTableRow>
                   <CTableHeaderCell scope="col" style={{ width: '10%' }} className="text-center">NO</CTableHeaderCell>

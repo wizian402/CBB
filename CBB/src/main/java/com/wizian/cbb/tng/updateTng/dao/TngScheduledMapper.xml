@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.wizian.cbb.tng.updateTng.dao.ITngScheduledRepository">
+	<select id="selectTng" resultType="hashmap">
+		SELECT
+		TNG_STDNT.TNG_APLY_NO AS "tngAplyNo",
+		TNG_STDNT.TNG_NO AS "tngNo",
+		TNG.TNG_ST_YMD AS "tngStYmd"
+		FROM
+		TNG_STDNT
+		INNER JOIN
+		TNG ON TNG_STDNT.TNG_NO = TNG.TNG_NO
+		WHERE
+		TNG_STDNT.TNG_PRGRS_STTS = '20' AND
+		TNG.PRGRS_STTS = '60'
+	</select>
+
+	<update id="updateTngStts">
+		UPDATE TNG
+		SET PRGRS_STTS = '30'
+		WHERE
+		TNG_NO = #{tngNo}
+	</update>
+
+	<update id="updateTngStdntStts">
+		UPDATE TNG_STDNT
+		SET TNG_PRGRS_STTS = '30'
+		WHERE
+		TNG_APLY_NO = #{tngAplyNo}
+	</update>
+
+</mapper>

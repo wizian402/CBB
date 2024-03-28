@@ -133,7 +133,7 @@ const TngList = () => {
               <div className="text-center">해당 현장 실습은 없습니다.</div>
             ) : (
               <React.Fragment>
-                <CTable>
+                <CTable hover>
                   <CTableHead>
                     <CTableRow>
                       <CTableHeaderCell scope="col" style={{ width: '10%' }} className="text-center">NO</CTableHeaderCell>
